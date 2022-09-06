@@ -19,12 +19,15 @@ export default function App() {
     <View style={styles.container}>
       <Text style={{ marginTop: 50 }}>Canvas Experiment</Text>
       <Canvas style={{ flex: 1 }}>
+        {/* // Comment out to make it work on the web */}
         <Box
           box={{ width: size, height: size, x: 1, y: 1 }}
           color='red'
           style='stroke'
           strokeWidth={2}
         />
+
+        {/* // Uncomment to test using rect in declarative and imperative style */}
         {/* <Rect width={size} height={size} x={1} y={1} color='red' style='stroke' strokeWidth={2} /> */}
         {/* <Drawing
           drawing={({ canvas, paint }) => {
@@ -32,6 +35,9 @@ export default function App() {
             paint.setStrokeWidth(2)
             paint.setStyle(PaintStyle.Stroke)
             canvas.drawRect({ x: 1, y: 1, width: size, height: size }, paint)
+
+            // reset paint style
+            paint.setStyle(PaintStyle.Fill)
           }}
         /> */}
 
