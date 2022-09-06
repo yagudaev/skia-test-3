@@ -4,17 +4,12 @@ import {
   Canvas,
   Circle,
   Group,
-  SkiaView,
-  SkJSIInstance,
-  SkSurface,
   Drawing,
   Skia,
   PaintStyle
 } from "@shopify/react-native-skia"
 import { StatusBar } from "expo-status-bar"
-import { useEffect, useRef } from "react"
 import { StyleSheet, Text, View } from "react-native"
-import type { CanvasKit } from "canvaskit-wasm"
 
 export default function App() {
   const size = 256
